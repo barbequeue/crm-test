@@ -1,0 +1,26 @@
+{
+  "name": "crm-test",
+  "version": "1.0.0",
+  "description": "Simple CRM system UI.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barbequeue/crm-test.git"
+  },
+  "keywords": [
+    "CRM",
+    "UI"
+  ],
+  "author": "barbequeue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barbequeue/crm-test/issues"
+  },
+  "homepage": "https://github.com/barbequeue/crm-test#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
