@@ -1,0 +1,79 @@
+doctype html
+html
+    head
+        title CRM test
+        link(rel='stylesheet', href='main.css')
+        link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet")
+        - 
+            var records = [
+                ["Title", "SUPER_ADMIN", "Production", "Aboutgoods", "Connected", "19/02/2018"], 
+                ["Title", "SUPER_ADMIN", "Production", "Aboutgoods", "Connected", "19/02/2018"], 
+                ["Title", "USER", "Production", "Charal", "Connected", "19/02/2018"], 
+                ["Title", "ADMIN", "Sale", "Nestle", "Connected", "29/01/2018"], 
+                ["Title", "ADMIN", "R&D", "Aboutgoods", "Connected", "19/02/2018"], 
+                ["Title", "USER", "Production", "IRi", "Disconnected", "19/02/2018"], 
+                ["Title", "ADMIN", "Production", "Aboutgoods", "Connected", "19/02/2018"],
+                ["Title", "USER", "Sales", "SOGEC", "Disconnected", "19/02/2018"]
+            ];
+    body
+        .sidebar.sidebar_position_left.sidebar_theme_indigo
+            .logo.sidebar__logo.logo_theme_indigo
+                .logo__image-container: .logo__image
+                .logo__label-1 CRM
+                .logo__label-2 test
+            nav.nav.sidebar__nav.nav_theme_indigo
+                .nav__item
+                    a.nav__link.nav__link_active(href="#") Applications
+                    a.nav__sublink(href="#") Nice app 1
+                .nav__item: a.nav__link(href="#") Documentation
+                .nav__item: a.nav__link(href="#") Settings
+                .nav__item: a.nav__link(href="#") Support
+                .nav__item: a.nav__link(href="#") Log out
+        .content.content_position_right
+            .header.header_theme_indigo
+                a.button.header__button.button_theme_indigo_outline
+                    img.button__icon(src="img/to-left-arrow.svg")
+                    | Back
+                .header__title ADMINISTRATION
+            .search-bar
+                form.search-form
+                    .search-form__group
+                        input.input.search-form__input.input_theme_indigo(placeholder="Search for something...")
+                        img.search-form__icon(src="img/search.svg")
+                    .search-form__label.search-form__label_theme_indigo
+                        span.search-form__highlight 4
+                        | services enregistrés
+                    input.button.search-form__submit.search-form__submit_theme_indigo(type="submit", value="ADD")
+            .table-container
+                table.table.table_theme_indigo
+                    thead.table__head
+                        tr.table__row
+                            td.table__cell_align_center Title
+                            td Role
+                            td Service
+                            td Company
+                            td Status
+                            td Date
+                            td.table__cell_align_center Actions
+                    tbody.table__body
+                        -for(var i = 0; i < records.length; i++ )
+                            tr.table__row
+                                td.table__cell_align_center= records[i][0]
+                                td= records[i][1]
+                                td= records[i][2]
+                                td= records[i][3]
+                                -if(records[i][4] == "Disconnected")
+                                    td 
+                                        .status-bar.status-bar_fail
+                                            | Disconnected
+                                            .status-bar__sign
+                                -if(records[i][4] == "Connected")
+                                    td
+                                        .status-bar.status-bar_success
+                                            | Connected
+                                            .status-bar__sign
+                                td= records[i][5]
+                                td
+                                    .icon-bar.icon-bar_theme_indigo
+                                        .icon-bar__container: img.icon-bar__icon(src="img/ellipsis.svg")
+                                        .icon-bar__container: img.icon-bar__icon(src="img/pen.svg")

@@ -16,22 +16,23 @@ npm install gulp-cli -g
 npm install gulp@next
 ```
 
-3. You are good to go! ��
+3. That's all! You are good to go! :ok_hand:
 
 ## Usage
 
 This useful commands will help you
+
 1. Runs server on _localhost:3000_ with live reload
 ```
 gulp
 ```
 
-2. Cleans build directory
+2. Cleans build by removing files from project/ dir
 ```
 gulp clean
 ```
 
-3. Builds .sass, .pug and images form src/ to build directory
+3. Builds .sass, .pug and images from src/ to build directory
 ```
 gulp sass
 gulp pug
