@@ -27,7 +27,7 @@ This useful commands will help you
 gulp
 ```
 
-2. Cleans build by removing files from project/ dir
+2. Cleans build directory by removing files from project/
 ```
 gulp clean
 ```
@@ -37,4 +37,9 @@ gulp clean
 gulp sass
 gulp pug
 gulp img
+```
+
+4. Performs three previous tasks simultaneously
+```
+gulp build
 ```
